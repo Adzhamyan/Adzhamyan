@@ -22,31 +22,31 @@ int main()
 
 	Complex sum = first + second;
 
-	cout << "сумма равна: " << sum << endl << endl;
+	cout << "СЃСѓРјРјР° СЂР°РІРЅР°: " << sum << endl << endl;
 
 	Complex difference_1 = first - second;
 	Complex difference_2 = second - first;
 
-	cout << "разность между первым и вторым = " << difference_1 << endl;
-	cout << "разность между вторым и первым = " << difference_1 << endl << endl;
+	cout << "СЂР°Р·РЅРѕСЃС‚СЊ РјРµР¶РґСѓ РїРµСЂРІС‹Рј Рё РІС‚РѕСЂС‹Рј = " << difference_1 << endl;
+	cout << "СЂР°Р·РЅРѕСЃС‚СЊ РјРµР¶РґСѓ РІС‚РѕСЂС‹Рј Рё РїРµСЂРІС‹Рј = " << difference_1 << endl << endl;
 
 	Complex composition = first * second;
 
-	cout << "произведение первого и второго = " << composition << endl << endl;
+	cout << "РїСЂРѕРёР·РІРµРґРµРЅРёРµ РїРµСЂРІРѕРіРѕ Рё РІС‚РѕСЂРѕРіРѕ = " << composition << endl << endl;
 
 	Complex quotient_1 = first / second;
 	Complex quotient_2 = second / first;
 
-	cout << "частное первого и второго = " << quotient_1 << endl;
-	cout << "частное второго и первого = " << quotient_2 << endl << endl;
+	cout << "С‡Р°СЃС‚РЅРѕРµ РїРµСЂРІРѕРіРѕ Рё РІС‚РѕСЂРѕРіРѕ = " << quotient_1 << endl;
+	cout << "С‡Р°СЃС‚РЅРѕРµ РІС‚РѕСЂРѕРіРѕ Рё РїРµСЂРІРѕРіРѕ = " << quotient_2 << endl << endl;
 
 
 	if (first.are_equal(second))
 	{
-		cout << "числа равны" << endl;
+		cout << "С‡РёСЃР»Р° СЂР°РІРЅС‹" << endl;
 	}
 	else
 	{
-		cout << "числа не равны" << endl;
+		cout << "С‡РёСЃР»Р° РЅРµ СЂР°РІРЅС‹" << endl;
 	}
 }

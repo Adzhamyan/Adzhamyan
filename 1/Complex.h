@@ -1,8 +1,5 @@
 #pragma once
 #include <iostream>
-
-#include <windows.h>
-
 #include <string>
 #include <iostream>
 
@@ -16,76 +13,76 @@ class Complex {
 public:
 
 	/**
-	*\brief Конструктор по умолчанию
+	*\brief РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	*/
 	Complex();
 	
 	/**
-	*\brief Конструктор с параметрами
-	* \param a действительная часть
-	* \param b мнимая часть
+	*\brief РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
+	* \param a РґРµР№СЃС‚РІРёС‚РµР»СЊРЅР°СЏ С‡Р°СЃС‚СЊ
+	* \param b РјРЅРёРјР°СЏ С‡Р°СЃС‚СЊ
 	*/
 	Complex(double real, double imaginary);
 
 
 
 	/**
-	*\brief Деструктор по умолчанию
+	*\brief Р”РµСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	*/
 	~Complex() = default;
 
 	/**
-	*\brief Геттер для действительной части
+	*\brief Р“РµС‚С‚РµСЂ РґР»СЏ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕР№ С‡Р°СЃС‚Рё
 	*/
 	double get_real();
 
 
 	/**
-	*\brief Геттер для мнимой части
+	*\brief Р“РµС‚С‚РµСЂ РґР»СЏ РјРЅРёРјРѕР№ С‡Р°СЃС‚Рё
 	*/
 	double get_imaginary();
 
 
 	/**
-	*\brief геттер для получения сопряжённого комплексного числа
+	*\brief РіРµС‚С‚РµСЂ РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ СЃРѕРїСЂСЏР¶С‘РЅРЅРѕРіРѕ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ С‡РёСЃР»Р°
 	*/
 	Complex get_conj();
 
 	/**
-	*\brief операторы сложения
+	*\brief РѕРїРµСЂР°С‚РѕСЂС‹ СЃР»РѕР¶РµРЅРёСЏ
 	*/
 	Complex operator+(const Complex& other);
 
 
 	/**
-	*\brief оператор вычитания
+	*\brief РѕРїРµСЂР°С‚РѕСЂ РІС‹С‡РёС‚Р°РЅРёСЏ
 	*/
 	Complex  operator-(const Complex& other);
 
 	/**
-	*\brief оператор умножения
+	*\brief РѕРїРµСЂР°С‚РѕСЂ СѓРјРЅРѕР¶РµРЅРёСЏ
 	*/
 	Complex  operator*(const Complex& other);
 
 	/**
-	*\brief оператор деления
+	*\brief РѕРїРµСЂР°С‚РѕСЂ РґРµР»РµРЅРёСЏ
 	*/
 	Complex   operator/(const Complex& other);
 
 	/**
-	*\brief метод для сравнения двух комплексных чисел
+	*\brief РјРµС‚РѕРґ РґР»СЏ СЃСЂР°РІРЅРµРЅРёСЏ РґРІСѓС… РєРѕРјРїР»РµРєСЃРЅС‹С… С‡РёСЃРµР»
 	*/
 	bool  are_equal(const Complex& other);
 
 
 	/**
-	*\brief перегрузка оператора <<
+	*\brief РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° <<
 	*/
 	friend ostream& operator<< (ostream& out, const Complex& c);
 
 
 	/**
-	*\brief перегрузка оператора >>
+	*\brief РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° >>
 	*/
 	friend istream& operator>> (istream& in, Complex& c);
 
