@@ -11,49 +11,49 @@ protected:
 	double distance;
 
 	/**
-	 \brief	Принимает среднюю скорость
+	 \brief	РџСЂРёРЅРёРјР°РµС‚ СЃСЂРµРґРЅСЋСЋ СЃРєРѕСЂРѕСЃС‚СЊ
 	 */
 	void set_average_speed(double average_speed);
 	/**
-	 \brief	Виртуальная функция принимает количество пассажиров
+	 \brief	Р’РёСЂС‚СѓР°Р»СЊРЅР°СЏ С„СѓРЅРєС†РёСЏ РїСЂРёРЅРёРјР°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ РїР°СЃСЃР°Р¶РёСЂРѕРІ
 	 */
 	virtual void set_number_of_passengers(int number_of_passengers) = 0;
 	/**
-	 \brief	Принимает дистанцию в километрах
+	 \brief	РџСЂРёРЅРёРјР°РµС‚ РґРёСЃС‚Р°РЅС†РёСЋ РІ РєРёР»РѕРјРµС‚СЂР°С…
 	 */
 	void set_distance(double distance);
 public:
 	/**
-	 \brief	Виртуальный деструктор
+	 \brief	Р’РёСЂС‚СѓР°Р»СЊРЅС‹Р№ РґРµСЃС‚СЂСѓРєС‚РѕСЂ
 	 */
 	virtual ~Vehicle() = 0;
 	/**
-	 \brief	Возвращает время движения
+	 \brief	Р’РѕР·РІСЂР°С‰Р°РµС‚ РІСЂРµРјСЏ РґРІРёР¶РµРЅРёСЏ
 	 \returns	distance / average_speed.
 	 */
 	double get_travel_time();
 	/**
-	 \brief	Возвращает среднюю скорость
+	 \brief	Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃСЂРµРґРЅСЋСЋ СЃРєРѕСЂРѕСЃС‚СЊ
 	 \returns average speed.
 	 */
 	double get_average_speed();
 	/**
-	 \brief	Возвращает модель средства передвижения
+	 \brief	Р’РѕР·РІСЂР°С‰Р°РµС‚ РјРѕРґРµР»СЊ СЃСЂРµРґСЃС‚РІР° РїРµСЂРµРґРІРёР¶РµРЅРёСЏ
 	 \returns model.
 	 */
 	string get_model();
 	/**
-	 \brief	Возвращает количество пассажиров
+	 \brief	Р’РѕР·РІСЂР°С‰Р°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ РїР°СЃСЃР°Р¶РёСЂРѕРІ
 	 \returns number of passengers.
 	 */
 	double get_number_of_passengers();
 	/**
-	 \brief	Возвращает расстояние в километрах
+	 \brief	Р’РѕР·РІСЂР°С‰Р°РµС‚ СЂР°СЃСЃС‚РѕСЏРЅРёРµ РІ РєРёР»РѕРјРµС‚СЂР°С…
 	 \returns distance.
 	 */
 	double get_distance();
 	/**
-	 \brief	Принимает новое значение расстояния
+	 \brief	РџСЂРёРЅРёРјР°РµС‚ РЅРѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ СЂР°СЃСЃС‚РѕСЏРЅРёСЏ
 	 */
 	virtual void set_new_distance(double distance) = 0;
 };

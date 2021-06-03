@@ -7,42 +7,42 @@ class Car : public Vehicle
 protected:
 	double fuel;
 	/**
-	 \brief	функция принимает количество топлива
+	 \brief	С„СѓРЅРєС†РёСЏ РїСЂРёРЅРёРјР°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ С‚РѕРїР»РёРІР°
 	 */
 	void set_fuel(double fuel);
 	/**
-	 \brief	функция принимает количество пассажиров
+	 \brief	С„СѓРЅРєС†РёСЏ РїСЂРёРЅРёРјР°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ РїР°СЃСЃР°Р¶РёСЂРѕРІ
 	 */
 	void set_number_of_passengers(int number_of_passengers) override;
 public:
 	/**
-	 \brief	Конструктор по умолчанию
+	 \brief	РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	*/
 	Car();
 	/**
-	 \brief	Конструктор с параметрами
+	 \brief	РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
 	*/
 	explicit Car(double average_speed, string& model, int number_of_passengers, double distance, double fuel);
 	/**
-	 \brief	Деструктор по умолчанию
+	 \brief	Р”РµСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	*/
 	~Car() override = default;
 	/**
-	 \brief	Возвращает количество топлива в литрах
+	 \brief	Р’РѕР·РІСЂР°С‰Р°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ С‚РѕРїР»РёРІР° РІ Р»РёС‚СЂР°С…
 	 \returns	fuel
 	 */
 	double get_fuel();
 	/**
-	 \brief	Устанавливает новое количество топлива
+	 \brief	РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РЅРѕРІРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ С‚РѕРїР»РёРІР°
 	 */
 	void set_new_fuel(double fuel);
 	/**
-	 \brief	Возвращает расход топлива на заданной дистанции при q - расход топлива на 100 км
+	 \brief	Р’РѕР·РІСЂР°С‰Р°РµС‚ СЂР°СЃС…РѕРґ С‚РѕРїР»РёРІР° РЅР° Р·Р°РґР°РЅРЅРѕР№ РґРёСЃС‚Р°РЅС†РёРё РїСЂРё q - СЂР°СЃС…РѕРґ С‚РѕРїР»РёРІР° РЅР° 100 РєРј
 	 \returns	q * distance / 100
 	 */
 	double get_fuel_consumption(double q);
 	/**
-	 \brief	функция принимает новое расстояние
+	 \brief	С„СѓРЅРєС†РёСЏ РїСЂРёРЅРёРјР°РµС‚ РЅРѕРІРѕРµ СЂР°СЃСЃС‚РѕСЏРЅРёРµ
 	 */
 	void set_new_distance(double distance) override;
 };

@@ -4,20 +4,20 @@ class Bicycle : public Vehicle
 {
 private:
 	/**
-	 \brief	функция принимает количество пассажиров
+	 \brief	С„СѓРЅРєС†РёСЏ РїСЂРёРЅРёРјР°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ РїР°СЃСЃР°Р¶РёСЂРѕРІ
 	 */
 	void set_number_of_passengers(int number_of_passengers) override;
 public:
 	/**
-	 \brief	Конструктор с параметрами
+	 \brief	РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
 	 */
 	explicit Bicycle(double average_speed, string& model, int number_of_passengers, double distance);
 	/**
-	 \brief	Деструктор по умолчанию
+	 \brief	Р”РµСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	 */
 	~Bicycle() override = default;
 	/**
-	 \brief	функция принимает новое расстояние
+	 \brief	С„СѓРЅРєС†РёСЏ РїСЂРёРЅРёРјР°РµС‚ РЅРѕРІРѕРµ СЂР°СЃСЃС‚РѕСЏРЅРёРµ
 	 */
 	void set_new_distance(double distance) override;
 };
