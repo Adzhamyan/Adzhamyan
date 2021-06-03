@@ -8,7 +8,7 @@ void Car::set_correct_number_cylinders(unsigned int number_cylinders)
 	}
 	else
 	{
-		throw invalid_argument{ "Неверное количество цилиндров" };
+		throw invalid_argument{ "РќРµРІРµСЂРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ С†РёР»РёРЅРґСЂРѕРІ" };
 	}
 }
 void Car::set_correct_power(double power)
@@ -19,7 +19,7 @@ void Car::set_correct_power(double power)
 	}
 	else
 	{
-		throw invalid_argument{ "Неверное количество цилиндров" };
+		throw invalid_argument{ "РќРµРІРµСЂРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ С†РёР»РёРЅРґСЂРѕРІ" };
 	}
 }
 void Car::set_trademark(string& trademark)

@@ -10,56 +10,56 @@ protected:
 	unsigned int number_cylinders;
 	double power;
 	/**
-	 \brief	проверяет число цилиндров
+	 \brief	РїСЂРѕРІРµСЂСЏРµС‚ С‡РёСЃР»Рѕ С†РёР»РёРЅРґСЂРѕРІ
 	 */
 	void set_correct_number_cylinders(unsigned int number_cylinders);
 	/**
-	 \brief	проверяет мощность
+	 \brief	РїСЂРѕРІРµСЂСЏРµС‚ РјРѕС‰РЅРѕСЃС‚СЊ
 	 */
 	void set_correct_power(double power);
 public:
 	/**
-	 \brief	Конструктор по умолчанию
+	 \brief	РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	 */
 	Car();
 	/**
-	 \brief	Конструктор с параметрами
+	 \brief	РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
 	 */
 	explicit Car(string trademark, unsigned int number_cylinders, double power);
 	/**
-	 \brief	Деструктор по умолчанию
+	 \brief	Р”РµСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	 */
 	~Car() = default;
 	/**
-	 \brief	Конструктор копирования
+	 \brief	РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ
 	 */
 	Car(const  Car&) = default;
 	/**
-	 \brief	Конструктор присваивания
+	 \brief	РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїСЂРёСЃРІР°РёРІР°РЅРёСЏ
 	 */
 	Car& operator=(const  Car&) = default;
 	/**
-	 \brief	получает марку
+	 \brief	РїРѕР»СѓС‡Р°РµС‚ РјР°СЂРєСѓ
 	 */
 	string get_trademark();
 	/**
-	 \brief	получает число цилиндров
+	 \brief	РїРѕР»СѓС‡Р°РµС‚ С‡РёСЃР»Рѕ С†РёР»РёРЅРґСЂРѕРІ
 	 */
 	unsigned int get_number_cylinders();
 	/**
-	 \brief	получает мощность
+	 \brief	РїРѕР»СѓС‡Р°РµС‚ РјРѕС‰РЅРѕСЃС‚СЊ
 	 */
 	double get_power();
 	/**
-	 \brief	задает марку
+	 \brief	Р·Р°РґР°РµС‚ РјР°СЂРєСѓ
 	 */
 	void set_trademark(string& trademark);
 	/**
-	 \brief	задает число цилиндров
+	 \brief	Р·Р°РґР°РµС‚ С‡РёСЃР»Рѕ С†РёР»РёРЅРґСЂРѕРІ
 	 */
 	void set_number_cylinders(unsigned int number_cylinders);
 	/**
-	 \brief	задает мощность
+	 \brief	Р·Р°РґР°РµС‚ РјРѕС‰РЅРѕСЃС‚СЊ
 	 */
 	void set_power(double power);
 };

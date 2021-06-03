@@ -7,7 +7,7 @@ void Lorry::set_correct_carrying(double carrying)
 	}
 	else
 	{
-		throw invalid_argument{ "Неверная грузоподъемность" };
+		throw invalid_argument{ "РќРµРІРµСЂРЅР°СЏ РіСЂСѓР·РѕРїРѕРґСЉРµРјРЅРѕСЃС‚СЊ" };
 	}
 }
 void Lorry ::set_carrying(double carrying)

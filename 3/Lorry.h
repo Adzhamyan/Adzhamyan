@@ -11,15 +11,15 @@ private:
 	void set_correct_carrying(double carrying);
 public:
 	/**
-	 \brief	Конструктор с параметрами
+	 \brief	РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
 	 */
 	explicit Lorry(string trademark, unsigned int number_cylinders, double power, double carrying);
 	/**
-	 \brief	получает грузоподъемность
+	 \brief	РїРѕР»СѓС‡Р°РµС‚ РіСЂСѓР·РѕРїРѕРґСЉРµРјРЅРѕСЃС‚СЊ
 	 */
 	double get_carrying();
 	/**
-	 \brief	задает грузоподъемность
+	 \brief	Р·Р°РґР°РµС‚ РіСЂСѓР·РѕРїРѕРґСЉРµРјРЅРѕСЃС‚СЊ
 	 */
 	void set_carrying(double carrying);
 };
