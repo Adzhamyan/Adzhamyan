@@ -3,7 +3,10 @@ double Square(double a, double b, double c)
 {
 	double p = (a + b + c) / 2.;
 	double result = p * (p - a) * (p - b) * (p - c);
-	return sqrt(result);
+	if (result < 0)
+		throw 1;
+	else
+		return sqrt(result);
 }
 
 double Square1(double a, double b, double c)

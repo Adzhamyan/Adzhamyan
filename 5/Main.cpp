@@ -4,7 +4,13 @@
 int main()
 {
 	SetConsoleOutputCP(1251);
-	cout << "Площадь равняется " << Square(1, 2, 3) << endl;
+	try
+	{
+		cout << "Площадь равняется " << Square(1, 2, 4) << endl;
+	}
+	catch (int) {
+		cerr << "Невозможно взять корень от отрицательного числа, без спецификатора" << endl;
+	}
 	try
 	{
 		cout <<"Площадь равняется " << Square1(1, 2,4) << endl;

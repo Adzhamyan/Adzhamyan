@@ -2,16 +2,24 @@
 #include <exception>
 #include <iostream>
 #include <string>
+/**
+	* \brief Класс насследник от стандартного исключения, для возврата ошибки
+	*/
 class MyException3 : public std::invalid_argument
 {
 public:
 	/**
-	* \brief  ласс насследник от стандартного исключени¤, дл¤ возврата ошибки
+	* \brief Коструктор с параметрами
 	*/
-	explicit MyException3(std::string message);
+	explicit MyException3(const std::string &message);
 
 	/**
-	* \brief ƒеструктор по умолчанию
+	* \brief Коструктор по умолчанию
+	*/
+	explicit MyException3() = default;
+
+	/**
+	* \brief Деструктор по умолчанию
 	*/
 	~MyException3();
 };
