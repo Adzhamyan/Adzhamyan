@@ -2,9 +2,7 @@
 #include <iostream>
 #include <string>
 #include <iostream>
-
 using namespace std;
-
 
 class Complex {
 
@@ -30,6 +28,15 @@ public:
 	*\brief Деструктор по умолчанию
 	*/
 	~Complex() = default;
+
+	/**
+	 \brief	Конструктор копирования
+	 */
+	Complex(const  Complex&) = default;
+	/**
+	 \brief	Конструктор присвоения
+	 */
+	Complex& operator=(const  Complex&) = default;
 
 	/**
 	*\brief Геттер для действительной части
@@ -73,7 +80,6 @@ public:
 	*\brief метод для сравнения двух комплексных чисел
 	*/
 	bool  are_equal(const Complex& other);
-
 
 	/**
 	*\brief перегрузка оператора <<
