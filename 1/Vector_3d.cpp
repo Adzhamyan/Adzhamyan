@@ -46,8 +46,7 @@ bool Vector_3d::are_qual(const Vector_3d& other)
 
 bool Vector_3d::is_greater(const Vector_3d& other)
 {
-	if (std::fabs(this->a - other.a) > std::numeric_limits<double>::epsilon() && std::fabs(this->b - other.b) > std::numeric_limits<double>::epsilon() &&
-		std::fabs(this->c - other.c) > std::numeric_limits<double>::epsilon())
+	if (this->a > other.a && this->b > other.b && this->c > other.c)
 	{
 		return true;
 	}
@@ -56,8 +55,7 @@ bool Vector_3d::is_greater(const Vector_3d& other)
 
 bool Vector_3d::is_less(const Vector_3d& other)
 {
-	if (std::fabs(this->a - other.a) > std::numeric_limits<double>::epsilon() && std::fabs(this->b - other.b) > std::numeric_limits<double>::epsilon() &&
-		std::fabs(this->c - other.c) > std::numeric_limits<double>::epsilon())
+	if (this->a < other.a && this->b < other.b && this->c < other.c)
 	{
 		return true;
 	}
@@ -86,10 +84,8 @@ bool Vector_3d::is_greater_length(const Vector_3d& other)
 {
 	double len_1 = sqrt(this->a * this->a + this->b * this->b + this->c * this->c);
 	double len_2 = sqrt(other.a * other.a + other.b * other.b + other.c * other.c);
-	double len_1 = sqrt(this->a * this->a + this->b * this->b + this->c * this->c);
-	double len_2 = sqrt(other.a * other.a + other.b * other.b + other.c * other.c);
 
-	if (std::fabs(len_1 - len_2) > std::numeric_limits<double>::epsilon())
+	if (len_1 > len_2)
 	{
 		return true;
 	}
@@ -101,10 +97,7 @@ bool Vector_3d::is_less_length(const Vector_3d& other)
 	double len_1 = sqrt(this->a * this->a + this->b * this->b + this->c * this->c);
 	double len_2 = sqrt(other.a * other.a + other.b * other.b + other.c * other.c);
 
-	double len_1 = sqrt(this->a * this->a + this->b * this->b + this->c * this->c);
-	double len_2 = sqrt(other.a * other.a + other.b * other.b + other.c * other.c);
-
-	if (std::fabs(len_1 - len_2) < std::numeric_limits<double>::epsilon())
+	if (len_1 < len_2)
 	{
 		return true;
 	}
