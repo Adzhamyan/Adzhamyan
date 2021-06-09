@@ -1,4 +1,5 @@
 #include "Vector_3d.h"
+#include <limits>
 
 Vector_3d::Vector_3d(double a, double b, double c)
 {
@@ -15,20 +16,12 @@ Vector_3d::Vector_3d()
 
 Vector_3d Vector_3d::operator+(const Vector_3d& other)
 {
-	Vector_3d temp;
-	temp.a = this->a + other.a;
-	temp.b = this->b + other.b;
-	temp.c = this->c + other.c;
-	return temp;
+	return Vector_3d(this->a + other.a, this->b + other.b, this->c + other.c);
 }
 
 Vector_3d Vector_3d::operator-(const Vector_3d& other)
 {
-	Vector_3d temp;
-	temp.a = this->a - other.a;
-	temp.b = this->b - other.b;
-	temp.c = this->c - other.c;
-	return temp;
+	return Vector_3d(this->a - other.a, this->b - other.b, this->c - other.c);
 }
 
 double Vector_3d::get_scalar_composition(const Vector_3d& other)
@@ -37,25 +30,24 @@ double Vector_3d::get_scalar_composition(const Vector_3d& other)
 }
 Vector_3d Vector_3d::get_multiplication_by_number(const Vector_3d, double a)
 {
-	Vector_3d temp;
-	temp.a = this->a * a;
-	temp.b = this->b * a;
-	temp.c = this->c * a;
-	return temp;
+	return Vector_3d(this->a * a, this->b * a, this->c * a);
 }
 
 bool Vector_3d::are_qual(const Vector_3d& other)
 {
-	if (this->a == other.a && this->b == other.b && this->b == other.b)
+	if (std::fabs(this->a - other.a) < std::numeric_limits<double>::epsilon() && std::fabs(this->b - other.b) < std::numeric_limits<double>::epsilon() &&
+		std::fabs(this->c - other.c) < std::numeric_limits<double>::epsilon())
 	{
 		return true;
 	}
 	else return false;
+	
 }
 
 bool Vector_3d::is_greater(const Vector_3d& other)
 {
-	if (this->a > other.a && this->b > other.b && this->b > other.b)
+	if (std::fabs(this->a - other.a) > std::numeric_limits<double>::epsilon() && std::fabs(this->b - other.b) > std::numeric_limits<double>::epsilon() &&
+		std::fabs(this->c - other.c) > std::numeric_limits<double>::epsilon())
 	{
 		return true;
 	}
@@ -64,7 +56,8 @@ bool Vector_3d::is_greater(const Vector_3d& other)
 
 bool Vector_3d::is_less(const Vector_3d& other)
 {
-	if (this->a < other.a && this->b < other.b && this->b < other.b)
+	if (std::fabs(this->a - other.a) > std::numeric_limits<double>::epsilon() && std::fabs(this->b - other.b) > std::numeric_limits<double>::epsilon() &&
+		std::fabs(this->c - other.c) > std::numeric_limits<double>::epsilon())
 	{
 		return true;
 	}
@@ -82,7 +75,7 @@ bool Vector_3d::are_qual_length(const Vector_3d& other)
 	double len_1 = sqrt(this->a * this->a + this->b * this->b + this->c * this->c);
 	double len_2 = sqrt(other.a * other.a + other.b * other.b + other.c * other.c);
 
-	if (len_1 == len_2)
+	if (std::fabs(len_1 - len_2) < std::numeric_limits<double>::epsilon())
 	{
 		return true;
 	}
@@ -93,8 +86,10 @@ bool Vector_3d::is_greater_length(const Vector_3d& other)
 {
 	double len_1 = sqrt(this->a * this->a + this->b * this->b + this->c * this->c);
 	double len_2 = sqrt(other.a * other.a + other.b * other.b + other.c * other.c);
+	double len_1 = sqrt(this->a * this->a + this->b * this->b + this->c * this->c);
+	double len_2 = sqrt(other.a * other.a + other.b * other.b + other.c * other.c);
 
-	if (len_1 > len_2)
+	if (std::fabs(len_1 - len_2) > std::numeric_limits<double>::epsilon())
 	{
 		return true;
 	}
@@ -106,9 +101,17 @@ bool Vector_3d::is_less_length(const Vector_3d& other)
 	double len_1 = sqrt(this->a * this->a + this->b * this->b + this->c * this->c);
 	double len_2 = sqrt(other.a * other.a + other.b * other.b + other.c * other.c);
 
-	if (len_1 < len_2)
+	double len_1 = sqrt(this->a * this->a + this->b * this->b + this->c * this->c);
+	double len_2 = sqrt(other.a * other.a + other.b * other.b + other.c * other.c);
+
+	if (std::fabs(len_1 - len_2) < std::numeric_limits<double>::epsilon())
 	{
 		return true;
 	}
 	else return false;
+}
+
+std::ostream& operator<<(std::ostream& out, Vector_3d& F)
+{
+	return out << F.a << " | " << F.b << " | " << F.c;
 }

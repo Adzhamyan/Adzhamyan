@@ -1,5 +1,6 @@
 #pragma once
 #include <cmath>
+#include <ostream>
 class Vector_3d
 {
 private:
@@ -39,6 +40,9 @@ public:
 	\brief	конструктор присвоения по умолчанию
 	*/
 	Vector_3d& operator=(const  Vector_3d&) = default;
+
+
+	Vector_3d(Vector_3d&& other) = default;
 
 	/**
 	\brief	сложение двух векторов
@@ -95,6 +99,9 @@ public:
 	\brief	сравненние длин
 	*/
 	bool is_less_length(const Vector_3d& other);
+
+
+	friend std::ostream& operator<<(std::ostream& out, Vector_3d& F);
 
 };
 
