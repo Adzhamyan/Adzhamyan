@@ -6,60 +6,63 @@ using namespace std;
 class Car
 {
 protected:
+	const int MIN_CYLINDERS = 0;
+	const int MAX_CYLINDERS = 25;
 	string trademark;
 	unsigned int number_cylinders;
 	double power;
 	/**
-	 \brief	РїСЂРѕРІРµСЂСЏРµС‚ С‡РёСЃР»Рѕ С†РёР»РёРЅРґСЂРѕРІ
+	 \brief	проверяет число цилиндров
 	 */
-	void set_correct_number_cylinders(unsigned int number_cylinders);
+	void set_correct_number_cylinders(const unsigned int number_cylinders);
 	/**
-	 \brief	РїСЂРѕРІРµСЂСЏРµС‚ РјРѕС‰РЅРѕСЃС‚СЊ
+	 \brief	проверяет мощность
 	 */
-	void set_correct_power(double power);
-public:
+	void set_correct_power(const double power);
 	/**
-	 \brief	РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+	 \brief	Конструктор по умолчанию
 	 */
 	Car();
+public:
+	
 	/**
-	 \brief	РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
+	 \brief	Конструктор с параметрами
 	 */
-	explicit Car(string trademark, unsigned int number_cylinders, double power);
+	explicit Car(const string& trademark, const unsigned int number_cylinders, const double power);
 	/**
-	 \brief	Р”РµСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+	 \brief	Деструктор по умолчанию
 	 */
 	~Car() = default;
 	/**
-	 \brief	РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ
+	 \brief	Конструктор копирования
 	 */
 	Car(const  Car&) = default;
 	/**
-	 \brief	РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїСЂРёСЃРІР°РёРІР°РЅРёСЏ
+	 \brief	Конструктор присваивания
 	 */
 	Car& operator=(const  Car&) = default;
 	/**
-	 \brief	РїРѕР»СѓС‡Р°РµС‚ РјР°СЂРєСѓ
+	 \brief	получает марку
 	 */
-	string get_trademark();
+	string get_trademark()const;
 	/**
-	 \brief	РїРѕР»СѓС‡Р°РµС‚ С‡РёСЃР»Рѕ С†РёР»РёРЅРґСЂРѕРІ
+	 \brief	получает число цилиндров
 	 */
-	unsigned int get_number_cylinders();
+	unsigned int get_number_cylinders()const;
 	/**
-	 \brief	РїРѕР»СѓС‡Р°РµС‚ РјРѕС‰РЅРѕСЃС‚СЊ
+	 \brief	получает мощность
 	 */
-	double get_power();
+	double get_power()const;
 	/**
-	 \brief	Р·Р°РґР°РµС‚ РјР°СЂРєСѓ
+	 \brief	задает марку
 	 */
-	void set_trademark(string& trademark);
+	void set_trademark(const string& trademark);
 	/**
-	 \brief	Р·Р°РґР°РµС‚ С‡РёСЃР»Рѕ С†РёР»РёРЅРґСЂРѕРІ
+	 \brief	задает число цилиндров
 	 */
-	void set_number_cylinders(unsigned int number_cylinders);
+	void set_number_cylinders(const unsigned int number_cylinders);
 	/**
-	 \brief	Р·Р°РґР°РµС‚ РјРѕС‰РЅРѕСЃС‚СЊ
+	 \brief	задает мощность
 	 */
-	void set_power(double power);
+	void set_power(const double power);
 };

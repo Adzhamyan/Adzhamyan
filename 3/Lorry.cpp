@@ -1,5 +1,5 @@
 #include "Lorry.h"
-void Lorry::set_correct_carrying(double carrying)
+void Lorry::set_correct_carrying(const double carrying)
 {
 	if (carrying >= MIN_CARRYING && carrying <= MAX_CARRYING)
 	{
@@ -7,21 +7,21 @@ void Lorry::set_correct_carrying(double carrying)
 	}
 	else
 	{
-		throw invalid_argument{ "ÐÐµÐ²ÐµÑ€Ð½Ð°Ñ Ð³Ñ€ÑƒÐ·Ð¾Ð¿Ð¾Ð´ÑŠÐµÐ¼Ð½Ð¾ÑÑ‚ÑŒ" };
+		throw invalid_argument{ "Íåâåðíàÿ ãðóçîïîäúåìíîñòü" };
 	}
 }
-void Lorry ::set_carrying(double carrying)
+void Lorry ::set_carrying(const double carrying)
 {
 	set_correct_carrying(carrying);
 }
-Lorry::Lorry(string trademark, unsigned int number_cylinders, double power, double carrying)
+Lorry::Lorry(const string& trademark, const unsigned int number_cylinders, const double power, const double carrying)
 {
 	this->trademark = trademark;
 	set_correct_number_cylinders(number_cylinders);
 	set_correct_power(power);
 	set_correct_carrying(carrying);
 }
-double Lorry::get_carrying()
+double Lorry::get_carrying()const
 {
 	return carrying;
 }

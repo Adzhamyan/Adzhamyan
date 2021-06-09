@@ -8,19 +8,19 @@ private:
 	double carrying;
 	const double MAX_CARRYING = 20000;
 	const double MIN_CARRYING = 0;
-	void set_correct_carrying(double carrying);
+	void set_correct_carrying(const double carrying);
 public:
 	/**
-	 \brief	РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
+	 \brief	Конструктор с параметрами
 	 */
-	explicit Lorry(string trademark, unsigned int number_cylinders, double power, double carrying);
+	explicit Lorry(const string& trademark, const unsigned int number_cylinders, const double power, const double carrying);
 	/**
-	 \brief	РїРѕР»СѓС‡Р°РµС‚ РіСЂСѓР·РѕРїРѕРґСЉРµРјРЅРѕСЃС‚СЊ
+	 \brief	получает грузоподъемность
 	 */
-	double get_carrying();
+	double get_carrying()const;
 	/**
-	 \brief	Р·Р°РґР°РµС‚ РіСЂСѓР·РѕРїРѕРґСЉРµРјРЅРѕСЃС‚СЊ
+	 \brief	задает грузоподъемность
 	 */
-	void set_carrying(double carrying);
+	void set_carrying(const double carrying);
 };
 
