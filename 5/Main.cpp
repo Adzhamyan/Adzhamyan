@@ -6,21 +6,21 @@ int main()
 	SetConsoleOutputCP(1251);
 	try
 	{
-		cout << "Площадь равняется " << Square(1, 2, 4) << endl;
+		cout << "Площадь равняется " << Square1(1, -2, 10) << endl;
 	}
-	catch (int) {
-		cerr << "Невозможно взять корень от отрицательного числа, без спецификатора" << endl;
-	}
-	try
-	{
-		cout <<"Площадь равняется " << Square1(1, 2,4) << endl;
-	}
-	catch (int) {
-		cerr <<"Невозможно взять корень от отрицательного числа, спецификатор throw" << endl ;
+	catch (...) {
+		cerr << "Невозможно вычислить площадь, без спецификатора" << endl;
 	}
 	try
 	{
-		cout << "Площадь равняется " << Square2(1, 2, 4) << endl;
+		cout <<"Площадь равняется " << Square1(1, -2,4) << endl;
+	}
+	catch (int) {
+		cerr <<"Невозможно вычислить площадь, спецификатор throw" << endl ;
+	}
+	try
+	{
+		cout << "Площадь равняется " << Square2(1, -2, 4) << endl;
 	}
 	catch (invalid_argument error) {
 		cerr << error.what() << endl ;
@@ -28,15 +28,15 @@ int main()
 
 	try
 	{
-		cout << "Площадь равняется " << Square3(1, 2, 4) << endl;
+		cout << "Площадь равняется " << Square3(1, -2, 4) << endl;
 	}
 	catch (MyException) {
-		cerr << "Невозможно взять корень от отрицательного числа, пустой класс" << endl ;
+		cerr << "Невозможно вычислить площадь, пустой класс" << endl ;
 	}
 
 	try
 	{
-		cout << "Площадь равняется " << Square4(1, 2, 4) << endl;
+		cout << "Площадь равняется " << Square4(1, -2, 4) << endl;
 	}
 	catch (MyException2 error) {
 		cerr << error.message << endl;
@@ -44,7 +44,7 @@ int main()
 
 	try
 	{
-		cout << "Площадь равняется " << Square5(1, 2, 4) << endl;
+		cout << "Площадь равняется " << Square5(1, -2, 4) << endl;
 	}
 	catch (MyException3 error) {
 		cerr << error.what() << endl;

@@ -4,14 +4,6 @@
 #include "MyException2.h"
 #include "MyException3.h"
 using namespace std;
-/**
-* \brief ‘ункци¤ вычисл¤юща¤ площадь треугольника
-* \param a сторона треугольника
-* \param b сторона треугольника
-* \param c сторона треугольника
-* \return ѕлощадь треугольника
-*/
-double Square(double a, double b, double c);
 
 /**
 * \brief ‘ункци¤ вычисл¤юща¤ площадь треугольника
@@ -20,7 +12,7 @@ double Square(double a, double b, double c);
 * \param c сторона треугольника
 * \return ѕлощадь треугольника
 */
-double Square1(double a, double b, double c);
+double Square1(const double a, const double b, const double c);
 
 /**
 * \brief ‘ункци¤ вычисл¤юща¤ площадь треугольника
@@ -29,7 +21,7 @@ double Square1(double a, double b, double c);
 * \param c сторона треугольника
 * \return ѕлощадь треугольника
 */
-double Square2(double a, double b, double c);
+double Square2(const double a, const double b, const double c);
 
 /**
 * \brief ‘ункци¤ вычисл¤юща¤ площадь треугольника
@@ -38,7 +30,7 @@ double Square2(double a, double b, double c);
 * \param c сторона треугольника
 * \return ѕлощадь треугольника
 */
-double Square3(double a, double b, double c);
+double Square3(const double a, const double b, const double c);
 
 /**
 * \brief ‘ункци¤ вычисл¤юща¤ площадь треугольника
@@ -47,7 +39,7 @@ double Square3(double a, double b, double c);
 * \param c сторона треугольника
 * \return ѕлощадь треугольника
 */
-double Square4(double a, double b, double c);
+double Square4(const double a, const double b, const double c);
 
 /**
 * \brief ‘ункци¤ вычисл¤юща¤ площадь треугольника
@@ -56,7 +48,7 @@ double Square4(double a, double b, double c);
 * \param c сторона треугольника
 * \return ѕлощадь треугольника
 */
-double Square5(double a, double b, double c);
+double Square5(const double a, const double b, const double c);
 
 
 

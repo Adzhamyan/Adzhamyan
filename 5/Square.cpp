@@ -1,58 +1,58 @@
 #include"Square.h"
-double Square(double a, double b, double c)
-{
+double Square(const double a, const double b, const double c) {
+	if (a < 0 || b < 0 || c < 0)
+		throw 1.0;
 	double p = (a + b + c) / 2.;
 	double result = p * (p - a) * (p - b) * (p - c);
 	if (result < 0)
-		throw 1;
-	else
-		return sqrt(result);
+		throw 1.0;
+	return sqrt(result);
 }
 
-double Square1(double a, double b, double c)
+double Square1(const double a, const double b, const double c)
 {
-	double p = (a + b + c) / 2.;
-	double result = p * (p - a) * (p - b) * (p - c);
-	if (result < 0)
+	try {
+		return  Square(a, b, c);
+	}
+	catch(double){
 		throw 1;
-	else
-		return sqrt(result);
+	}
 }
 
-double Square2(double a, double b, double c) {
-	double p = (a + b + c) / 2.;
-	double result = p * (p - a) * (p - b) * (p - c);
-	if (result < 0)
-		throw invalid_argument{ "Невозможно взять корень от отрицательного числа, стандартное исключение" };
-	else
-		return sqrt(result);
+double Square2(const double a, const double b, const double c) {
+	try {
+		return Square(a, b, c);
+	}
+	catch (double) {
+		throw invalid_argument{ "Невозможно вычислить площадь, стандартное исключение" };
+	}
 }
-double Square3(double a, double b, double c)
+double Square3(const double a, const double b, const double c)
 {
-	double p = (a + b + c) / 2.;
-	double result = p * (p - a) * (p - b) * (p - c);
-	if (result < 0)
+	try {
+		return  Square(a, b, c);
+	}
+	catch (double) {
 		throw MyException();
-	else 
-		return sqrt(result);
+	}
 }
 
-double Square4(double a, double b, double c)
+double Square4(const double a, const double b, const double c)
 {
-	double p = (a + b + c) / 2.;
-	double result = p * (p - a) * (p - b) * (p - c);
-	if (result < 0)
-		throw MyException2("Невозможно взять корень от отрицательного числа, независимый класс с полями-параметрами функции");
-	else
-		return sqrt(result);
+	try {
+		return  Square(a, b, c);
+	}
+	catch (double) {
+		throw MyException2("Невозможно вычислить площадь, независимый класс с полями-параметрами функции");
+	}
 }
 
-double Square5(double a, double b, double c)
+double Square5(const double a, const double b, const double c)
 {
-	double p = (a + b + c) / 2.;
-	double result = p * (p - a) * (p - b) * (p - c);
-	if (result < 0)
-		throw MyException3("Невозможно взять корень от отрицательного числа, класс наследник");
-	else
-		return sqrt(result);
+	try {
+		return  Square(a, b, c);
+	}
+	catch (double) {
+		throw MyException3("Невозможно вычислить площадь, класс наследник");
+	}
 }
