@@ -2,7 +2,7 @@
 using namespace std;
 void Truck::set_number_of_passengers(int number_of_passengers)
 {
-	if (number_of_passengers > 0 && number_of_passengers <= 3)
+	if (number_of_passengers >= MIN_PASSANGERS_TRUCK && number_of_passengers <= MAX_PASSANGERS_TRUCK)
 	{
 		this->number_of_passengers = number_of_passengers;
 	}
@@ -22,7 +22,7 @@ void Truck::set_carrying(double carrying)
 		throw invalid_argument("Incorrect lifting capacity");
 	}
 }
-Truck::Truck(double average_speed, string& model, int number_of_passengers, double distance, double fuel, double carrying)
+Truck::Truck(const double average_speed, const string& model, const int number_of_passengers, const double distance, const double fuel, const double carrying)
 {
 	set_average_speed(average_speed);
 	this->model = model;
@@ -31,7 +31,7 @@ Truck::Truck(double average_speed, string& model, int number_of_passengers, doub
 	set_fuel(fuel);
 	set_carrying(carrying);
 }
-double Truck::get_carrying()
+double Truck::get_carrying()const
 {
 	return carrying;
 }

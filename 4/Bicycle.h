@@ -3,15 +3,16 @@
 class Bicycle : public Vehicle
 {
 private:
+	const int MAX_PASSANGERS_BICYCLE = 1;
 	/**
 	 \brief	функция принимает количество пассажиров
 	 */
-	void set_number_of_passengers(int number_of_passengers) override;
+	void set_number_of_passengers(const int number_of_passengers) override;
 public:
 	/**
 	 \brief	Конструктор с параметрами
 	 */
-	explicit Bicycle(double average_speed, string& model, int number_of_passengers, double distance);
+	explicit Bicycle(const double average_speed, const string& model, const int number_of_passengers, const double distance);
 	/**
 	 \brief	Деструктор по умолчанию
 	 */

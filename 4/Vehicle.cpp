@@ -2,7 +2,7 @@
 #include "Vehicle.h"
 using namespace std;
 
-void Vehicle::set_average_speed(double average_speed)
+void Vehicle::set_average_speed(const double average_speed)
 {
 	if (average_speed > 0)
 	{
@@ -13,7 +13,7 @@ void Vehicle::set_average_speed(double average_speed)
 		throw invalid_argument("The speed must be positive");
 	}
 }
-void Vehicle::set_distance(double distance)
+void Vehicle::set_distance(const double distance)
 {
 	if (distance > 0)
 	{
@@ -24,23 +24,23 @@ void Vehicle::set_distance(double distance)
 		throw invalid_argument("Distance must be greater than zero");
 	}
 }
-double Vehicle::get_travel_time()
+double Vehicle::get_travel_time()const
 {
 	return distance / average_speed;
 }
-double Vehicle::get_average_speed()
+double Vehicle::get_average_speed()const
 {
 	return average_speed;
 }
-double Vehicle::get_number_of_passengers()
+double Vehicle::get_number_of_passengers()const
 {
 	return number_of_passengers;
 }
-double Vehicle::get_distance()
+double Vehicle::get_distance()const
 {
 	return distance;
 }
-string Vehicle::get_model()
+string Vehicle::get_model()const
 {
 	return model;
 }

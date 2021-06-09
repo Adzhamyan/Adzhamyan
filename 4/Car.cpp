@@ -2,7 +2,7 @@
 using namespace std;
 void Car::set_number_of_passengers(int number_of_passengers)
 {
-	if (number_of_passengers > 0 && number_of_passengers <= 5)
+	if (number_of_passengers >= MIN_PASSANGERS_CAR && number_of_passengers <= MAX_PASSANGERS_CAR)
 	{
 		this->number_of_passengers = number_of_passengers;
 	}
@@ -11,7 +11,7 @@ void Car::set_number_of_passengers(int number_of_passengers)
 		throw invalid_argument("Passengers can be from 1 to 5");
 	}
 }
-void Car::set_fuel(double fuel)
+void Car::set_fuel(const double fuel)
 {
 	if (fuel > 0)
 	{
@@ -29,7 +29,7 @@ Car::Car()
 	number_of_passengers = 1;
 	fuel = 1;
 }
-Car::Car(double average_speed, string& model, int number_of_passengers, double distance, double fuel)
+Car::Car(const double average_speed, const string& model, const int number_of_passengers, const double distance, const double fuel)
 {
 	set_average_speed(average_speed);
 	this->model = model;
@@ -37,19 +37,19 @@ Car::Car(double average_speed, string& model, int number_of_passengers, double d
 	set_distance(distance);
 	set_fuel(fuel);
 }
-double Car::get_fuel()
+double Car::get_fuel()const
 {
 	return fuel;
 }
-double Car::get_fuel_consumption(double q)
+double Car::get_fuel_consumption(const double q)
 {
 	return q * distance / 100;
 }
-void Car::set_new_fuel(double fuel)
+void Car::set_new_fuel(const double fuel)
 {
 	set_fuel(fuel);
 }
-void Car::set_new_distance(double distance)
+void Car::set_new_distance(const double distance)
 {
 	set_distance(distance);
 }
