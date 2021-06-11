@@ -62,37 +62,30 @@ public:
 	/**
 	\brief	умножение на скаляр
 	*/
-	Vector_3d get_multiplication_by_number(const Vector_3d, double scalar);
-
-
-	/**
-	\brief	равные ли два вектора
-	*/
-	bool are_qual(const Vector_3d& other);
-
+	Vector_3d get_multiplication_by_number(double scalar);
 
 	/**
 	\brief	длина вектора
 	*/
-	double get_length();
+	double get_length() const;
 
 	/**
 	\brief	сравненние длин
 	*/
-	bool are_qual_length(const Vector_3d& other);
+	bool are_qual(const Vector_3d& other);
 	
 	/**
 	\brief	сравненние длин
 	*/
-	bool is_greater_length(const Vector_3d& other);
+	bool is_greater(const Vector_3d& other);
 
 	/**
 	\brief	сравненние длин
 	*/
-	bool is_less_length(const Vector_3d& other);
+	bool is_less(const Vector_3d& other);
 
 
-	friend std::ostream& operator<<(std::ostream& out, Vector_3d& M);
+	friend std::ostream& operator<<(std::ostream& out, Vector_3d& m);
 
 };
 
