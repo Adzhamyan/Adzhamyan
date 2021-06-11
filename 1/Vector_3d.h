@@ -62,7 +62,7 @@ public:
 	/**
 	\brief	умножение на скаляр
 	*/
-	Vector_3d get_multiplication_by_number(const Vector_3d, double a);
+	Vector_3d get_multiplication_by_number(const Vector_3d, double scalar);
 
 
 	/**
@@ -70,15 +70,6 @@ public:
 	*/
 	bool are_qual(const Vector_3d& other);
 
-	/**
-	\brief	больше ли два вектора
-	*/
-	bool is_greater(const Vector_3d& other);
-
-	/**
-	\brief	меньше ли два вектора
-	*/
-	bool is_less(const Vector_3d& other);
 
 	/**
 	\brief	длина вектора
@@ -101,7 +92,7 @@ public:
 	bool is_less_length(const Vector_3d& other);
 
 
-	friend std::ostream& operator<<(std::ostream& out, Vector_3d& F);
+	friend std::ostream& operator<<(std::ostream& out, Vector_3d& M);
 
 };
 

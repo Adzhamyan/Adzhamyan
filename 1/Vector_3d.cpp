@@ -28,34 +28,15 @@ double Vector_3d::get_scalar_composition(const Vector_3d& other)
 {
 	return this->a * other.a + this->b * other.b + this->c * other.c;
 }
-Vector_3d Vector_3d::get_multiplication_by_number(const Vector_3d, double a)
+Vector_3d Vector_3d::get_multiplication_by_number(const Vector_3d, double scalar)
 {
-	return Vector_3d(this->a * a, this->b * a, this->c * a);
+	return Vector_3d(this->a * scalar, this->b * scalar, this->c * scalar);
 }
 
 bool Vector_3d::are_qual(const Vector_3d& other)
 {
 	if (std::fabs(this->a - other.a) < std::numeric_limits<double>::epsilon() && std::fabs(this->b - other.b) < std::numeric_limits<double>::epsilon() &&
 		std::fabs(this->c - other.c) < std::numeric_limits<double>::epsilon())
-	{
-		return true;
-	}
-	else return false;
-	
-}
-
-bool Vector_3d::is_greater(const Vector_3d& other)
-{
-	if (this->a > other.a && this->b > other.b && this->c > other.c)
-	{
-		return true;
-	}
-	else return false;
-}
-
-bool Vector_3d::is_less(const Vector_3d& other)
-{
-	if (this->a < other.a && this->b < other.b && this->c < other.c)
 	{
 		return true;
 	}
@@ -104,7 +85,7 @@ bool Vector_3d::is_less_length(const Vector_3d& other)
 	else return false;
 }
 
-std::ostream& operator<<(std::ostream& out, Vector_3d& F)
+std::ostream& operator<<(std::ostream& out, Vector_3d& M)
 {
-	return out << F.a << " | " << F.b << " | " << F.c;
+	return out << M.a << " | " << M.b << " | " << M.c;
 }
